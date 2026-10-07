@@ -1,0 +1,57 @@
+:root {
+  --brand: #D92A22;
+  --brand-dark: #9E1B15;
+  --bg: #F3F4F4;
+  --surface: #FFFFFF;
+  --ink: #16161A;
+  --muted: #5F5E5E;
+  --line: #E4E5E5;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000000;
+    --surface: #1A1A1D;
+    --ink: #F5F5F7;
+    --muted: #A0A0A6;
+    --line: #2A2A2F;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+header {
+  background: linear-gradient(135deg, #EA3D33, var(--brand-dark));
+  color: #FFFFFF;
+  padding: 40px 16px 56px;
+}
+.wrap { max-width: 720px; margin: 0 auto; }
+.brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: inherit; }
+.brand svg { width: 44px; height: 44px; flex-shrink: 0; }
+.brand span { font-family: "Montserrat", sans-serif; font-weight: 800; font-size: 26px; letter-spacing: -0.5px; }
+h1 { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 32px; line-height: 1.15; margin: 28px 0 6px; }
+.updated { opacity: 0.85; font-weight: 600; margin: 0; }
+nav { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 20px; }
+nav a {
+  color: #FFFFFF; text-decoration: none; font-weight: 700; font-size: 15px;
+  padding: 8px 14px; border-radius: 999px; background: rgba(255, 255, 255, 0.16);
+}
+nav a[aria-current="page"] { background: #FFFFFF; color: var(--brand); }
+main { padding: 0 16px 40px; margin-top: -28px; }
+.intro, section {
+  background: var(--surface);
+  border-radius: 22px;
+  padding: 20px 22px;
+  margin-bottom: 14px;
+}
+.intro { font-family: "Montserrat", sans-serif; font-weight: 700; font-size: 19px; line-height: 1.4; }
+h2 { font-family: "Montserrat", sans-serif; font-size: 18px; margin: 0 0 6px; }
+section p { margin: 0; color: var(--muted); }
+a { color: var(--brand); }
+footer { color: var(--muted); font-size: 14px; text-align: center; padding: 8px 16px 40px; }
